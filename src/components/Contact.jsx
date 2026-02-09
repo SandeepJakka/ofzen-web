@@ -3,27 +3,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
     {
-        name: "Alex Rivers",
-        role: "Visionary at X-Labs",
+        name: "sivaji kumar polisetti",
+        role: "CEO of NRI Connects",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD7UuJiVMVyAa7JQOiiKnz87DXgbw1ZBbwG7cTvR76oUUYERDcmoBfJZT0obcrbXvZQBqwny2knGJcXWNIFjaAiylyDmf36vSDSv5WpVYo6ynVNUBSCFJbNMX2CQaxOnqNvcywLHZY_3jj2GvRZad65H8ybEHkvXhT3XWi9ixkWTiMq302rvRHmU1eDK7qANubsHS5zfaqhdYDcDD09MZnTDaoxPQXmQeejEo2s39PHhmGyUZWokpozAIdlkZw14zbwQ0rimdJsU3OY",
         quote: "Ofzen's vision for 2026 is unparalleled. The glassmorphic interface is stunning and sets a new standard for luxury tech.",
         verified: true
     },
     {
-        name: "Sarah Chen",
-        role: "CTO at Lumina",
+        name: "Dr. Rama Sri",
+        role: "Dean at Aditya University",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBiNXIHn86Hx1a2HW6f-MRbZ1y17-pEFXs0_DN6GZUu-Gjs1CvNC4zBGtzjo5gA0PdevMUrCe8XKJzkbMRsJJXbvWxw8uzdYmgdoQ4E5Rta0qXhIzm44uyk2D6nKXQZaIJDRQQtVmpPg07ebi8Y0cIiXDEuFCUkTwcdCa7f97aku-QqlY6E2C-inbjIAmFrShGbLWhwP9XJjhRrITSEeijHMO41g47FhlBqpvvQOAwElGcNp4ruHhOG_wt8vbsuMbB75-tNdmvSRmuo",
         quote: "The most futuristic agency we've partnered with. Highly recommended for those seeking a cutting-edge presence.",
         verified: true,
         offset: true
     },
     {
-        name: "Marcus Thorne",
-        role: "Founder of Aether",
+        name: "Krishna Mohan Koyya",
+        role: "Director of Koyya Enterprises Private Limited",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDY_neTyWJoPYWw2xUG-s8EAsSeqDeyRjxBIAivvtEIjySAR7WuxwGDyIZt3jthSFlMc7Z3eh5IQ-5hsaWZ9mYxFUjwo9Lb_Fe1-nJpFnN8P76S0limVVJVwDI4QKYWyMaLHUriCN5EO5InJteQig5dqC5BZw9EcIBSFH_z19omwEtKyH7UspJ7xgnCS1tYUEyLwpJNkiZUcfIoAeMTeM4brXv9VBzeG4BkHdtBLsV_AvzAjHqeZcXAjVreqP33wuHK2z98nX-IDQIc",
         quote: "Engineering excellence meets pearlescent design. Every pixel is intentional. A true masterpiece of modern UI.",
         verified: true
     }
+
 ];
 
 const faqs = [
