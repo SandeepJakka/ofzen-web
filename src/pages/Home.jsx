@@ -35,7 +35,7 @@ const Home = () => {
                             </button>
                             <button
                                 onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="flex min-w-[160px] items-center justify-center rounded-xl h-14 px-8 bg-white/50 dark:bg-white/5 border border-black/5 dark:border-white/10 text-heading text-base font-bold transition-all hover:bg-white/80 dark:hover:bg-white/10 backdrop-blur-sm cursor-pointer"
+                                className="flex min-w-[160px] items-center justify-center rounded-xl h-14 px-8 bg-white/50 dark:bg-white/5 border border-black/5 dark:border-white/10 text-heading text-base font-bold transition-all hover:bg-white/80 dark:hover:bg-white/10 hover:border-primary backdrop-blur-sm cursor-pointer"
                             >
                                 View Our Work
                             </button>
@@ -83,13 +83,13 @@ const Home = () => {
             <div className="relative z-20 max-w-[960px] mx-auto w-full px-4 pb-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <motion.div
-                        whileHover={{ y: -5 }}
+                        whileHover={{ y: -5, borderColor: '#135bec' }}
                         whileInView={{
                             y: typeof window !== 'undefined' && window.innerWidth < 768 ? -8 : 0,
                             borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
                         }}
                         viewport={{ margin: "-40% 0px -40% 0px" }}
-                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group hover:border-primary/30 transition-all duration-500"
+                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group transition-all duration-500"
                     >
                         <span className="material-symbols-outlined text-primary text-3xl">hub</span>
                         <h3 className="text-lg font-bold text-heading">Strategic Design</h3>
@@ -97,13 +97,13 @@ const Home = () => {
                     </motion.div>
 
                     <motion.div
-                        whileHover={{ y: -5 }}
+                        whileHover={{ y: -5, borderColor: '#135bec' }}
                         whileInView={{
                             y: typeof window !== 'undefined' && window.innerWidth < 768 ? -8 : 0,
                             borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
                         }}
                         viewport={{ margin: "-40% 0px -40% 0px" }}
-                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group hover:border-primary/30 transition-all duration-500"
+                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group transition-all duration-500"
                     >
                         <span className="material-symbols-outlined text-primary text-3xl">memory</span>
                         <h3 className="text-lg font-bold text-heading ">Advanced Engineering</h3>
@@ -111,13 +111,13 @@ const Home = () => {
                     </motion.div>
 
                     <motion.div
-                        whileHover={{ y: -5 }}
+                        whileHover={{ y: -5, borderColor: '#135bec' }}
                         whileInView={{
                             y: typeof window !== 'undefined' && window.innerWidth < 768 ? -8 : 0,
                             borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
                         }}
                         viewport={{ margin: "-40% 0px -40% 0px" }}
-                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group hover:border-primary/30 transition-all duration-500"
+                        className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/20 dark:bg-white/[0.02] backdrop-blur-sm flex flex-col gap-4 group transition-all duration-500"
                     >
                         <span className="material-symbols-outlined text-primary text-3xl">science</span>
                         <h3 className="text-lg font-bold text-heading">Innovation Lab</h3>

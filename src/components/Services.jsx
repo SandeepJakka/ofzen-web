@@ -16,7 +16,7 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 auto-rows-[240px]">
                 {/* Web Development (Wide) */}
                 <motion.div
-                    whileHover={{ y: -4 }}
+                    whileHover={{ y: -4, borderColor: '#135bec' }}
                     whileInView={{
                         y: typeof window !== 'undefined' && window.innerWidth < 768 ? -10 : 0,
                         borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
@@ -44,7 +44,7 @@ const Services = () => {
 
                 {/* App Development (Tall/Square) */}
                 <motion.div
-                    whileHover={{ y: -4 }}
+                    whileHover={{ y: -4, borderColor: '#135bec' }}
                     whileInView={{
                         y: typeof window !== 'undefined' && window.innerWidth < 768 ? -10 : 0,
                         borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
@@ -69,7 +69,7 @@ const Services = () => {
 
                 {/* Custom Software (Small Square) */}
                 <motion.div
-                    whileHover={{ y: -4 }}
+                    whileHover={{ y: -4, borderColor: '#135bec' }}
                     whileInView={{
                         y: typeof window !== 'undefined' && window.innerWidth < 768 ? -10 : 0,
                         borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
@@ -87,7 +87,7 @@ const Services = () => {
 
                 {/* UI/UX Design (Wide) */}
                 <motion.div
-                    whileHover={{ y: -4 }}
+                    whileHover={{ y: -4, borderColor: '#135bec' }}
                     whileInView={{
                         y: typeof window !== 'undefined' && window.innerWidth < 768 ? -10 : 0,
                         borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
@@ -112,7 +112,7 @@ const Services = () => {
 
                 {/* Growth / SMM (Small) */}
                 <motion.div
-                    whileHover={{ y: -4 }}
+                    whileHover={{ y: -4, borderColor: '#135bec' }}
                     whileInView={{
                         y: typeof window !== 'undefined' && window.innerWidth < 768 ? -10 : 0,
                         borderColor: typeof window !== 'undefined' && window.innerWidth < 768 ? '#135bec' : 'transparent'
