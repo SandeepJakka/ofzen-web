@@ -50,52 +50,93 @@ const projects = [
 const Work = () => {
     const navigate = useNavigate();
     const containerRef = useRef(null);
-    const [percent, setPercent] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
 
-    // Sync percent with scroll
+    // Auto-scroll effect
     useEffect(() => {
-        const el = containerRef.current;
-        if (!el) return;
+        const interval = setInterval(() => {
+            if (!isHovered && containerRef.current) {
+                const container = containerRef.current;
+                const cardWidth = container.children[0]?.offsetWidth || 300;
+                const gap = window.innerWidth >= 768 ? 48 : 32;
+                const scrollAmount = cardWidth + gap;
 
-        const handleScroll = () => {
-            const maxScroll = el.scrollWidth - el.clientWidth;
-            if (maxScroll <= 0) return;
-            const currentPercent = (el.scrollLeft / maxScroll) * 100;
-            setPercent(currentPercent);
-        };
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }
+        }, 3000);
 
-        el.addEventListener('scroll', handleScroll, { passive: true });
-        return () => el.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => clearInterval(interval);
+    }, [isHovered]);
 
-    // Handle slider interaction
-    const handleSliderMove = (e) => {
-        const el = containerRef.current;
-        if (!el) return;
-        const value = parseFloat(e.target.value);
-        const maxScroll = el.scrollWidth - el.clientWidth;
-        el.scrollTo({
-            left: value * maxScroll,
-            behavior: 'auto' // Use 'auto' for direct drag feedback, the slider itself will feel smooth
-        });
+    const scroll = (direction) => {
+        const container = containerRef.current;
+        if (!container) return;
+
+        const cardWidth = container.children[0]?.offsetWidth || 300;
+        const gap = window.innerWidth >= 768 ? 48 : 32;
+        const scrollAmount = cardWidth + gap;
+
+        if (direction === 'left') {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     };
 
     return (
         <section id="work" className="silk-texture pt-32 pb-24 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-10 mb-12">
+            <div className="max-w-7xl mx-auto px-10 mb-12 flex justify-between items-end">
                 <div className="flex flex-col gap-2">
                     <p className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase">Portfolio 2026</p>
                     <h1 className="text-heading text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">
                         Selected Work
                     </h1>
                 </div>
+
+                {/* Navigation Buttons */}
+                <div className="hidden md:flex gap-4">
+                    <button
+                        onClick={() => scroll('left')}
+                        className="size-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                    >
+                        <span className="material-symbols-outlined">west</span>
+                    </button>
+                    <button
+                        onClick={() => scroll('right')}
+                        className="size-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                    >
+                        <span className="material-symbols-outlined">east</span>
+                    </button>
+                </div>
             </div>
 
             {/* Horizontal Gallery */}
-            <div className="relative w-full group mb-4">
+            <div
+                className="relative w-full group mb-4"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                {/* Mobile Navigation Buttons Overlay */}
+                <button
+                    onClick={() => scroll('left')}
+                    className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur shadow-lg flex items-center justify-center text-heading"
+                >
+                    <span className="material-symbols-outlined">west</span>
+                </button>
+                <button
+                    onClick={() => scroll('right')}
+                    className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur shadow-lg flex items-center justify-center text-heading"
+                >
+                    <span className="material-symbols-outlined">east</span>
+                </button>
+
                 <div
                     ref={containerRef}
-                    className="flex overflow-x-auto hide-scrollbar px-10 gap-8 md:gap-12 pt-8 pb-4 cursor-grab active:cursor-grabbing snap-x snap-proximity"
+                    className="flex overflow-x-auto hide-scrollbar px-10 gap-8 md:gap-12 pt-8 pb-4 cursor-grab active:cursor-grabbing snap-x snap-proximity scroll-smooth"
                 >
                     {projects.map((project, index) => (
                         <motion.div
@@ -132,8 +173,6 @@ const Work = () => {
                     <div className="flex-none w-[10vw]" /> {/* End Spacer */}
                 </div>
             </div>
-
-
 
             {/* Expertise Domains */}
             <div className="max-w-7xl mx-auto px-10 mt-32 grid grid-cols-1 md:grid-cols-3 gap-12">
