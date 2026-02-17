@@ -13,7 +13,7 @@ const Footer = () => {
                     <span className="font-bold text-lg text-heading  leading-none">Ofzen</span>
                 </div>
 
-                <p className="text-sm text-gray-500 dark:text-gray-500">© 2026 Ofzen • Remote • All rights reserved • ofzenenterprise@gmail.com</p>
+                <p className="text-sm text-gray-500 dark:text-gray-500">© 2026 Ofzen • All rights reserved • Built with intention. Delivered with care. • ofzenenterprise@gmail.com</p>
 
                 <div className="flex gap-6">
                     <a className="text-gray-500 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest" href="https://www.linkedin.com/company/ofzen/">
