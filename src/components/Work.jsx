@@ -10,34 +10,34 @@ import Unipilot from '../assets/Unipilot.jpeg';
 const projects = [
     {
         title: "Koyya Enterprises",
-        category: "Enterprise Orchestration Platform",
+        category: "Turning Ideas into Impactful Solutions",
         image: Koyya,
         width: "w-[85vw] md:w-[750px]",
     },
     {
         title: "Code Tracker",
-        category: "Sustainability Dashboard",
+        category: "Track Code, builder better",
         //image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDt3hoH7beht8VmEch3ibONIzOL6WuMVegFGJU_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qqazq5O6th-PZXoUp0Dp8uwKyeh9LRJSkDsAbIg_BAQuQyJNH1_",
         image: CodeTracker,
         width: "w-[85vw] md:w-[750px]",
     },
     {
         title: "SKC Caterers",
-        category: "Digital Experience",
+        category: "100% Pure Vegetarian",
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8X29jXnrQ42KNad2uNXBGv2DyEK_Jnlx45gRQeRlfHN1YeJ5JUjCAi9o6fRm8gayInvBAiuP2REFop87YTNKSWEwgcY-PpVVDMkXJqohdFE2gylo8yZ-xgGjwMLK_VZYKMl8PaVGEUn9i9sZ-WN_Zd0gvmVTPZCoNtCxwTAIISGR6RsjSlhZ8AqbIDEuOD_Du2SP7XFcObA8Phf1YNlXai4PBTHT8c74Z7IO5i7exY0QL9uqJf0mQ6ZWvFvC-SJHjINXioOmp0Mjc",
         image: SKC,
         width: "w-[85vw] md:w-[750px]",
     },
     {
         title: "Unipilot",
-        category: "Digital Experience",
+        category: "Building the future of University Management",
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8X29jXnrQ42KNad2uNXBGv2DyEK_Jnlx45gRQeRlfHN1YeJ5JUjCAi9o6fRm8gayInvBAiuP2REFop87YTNKSWEwgcY-PpVVDMkXJqohdFE2gylo8yZ-xgGjwMLK_VZYKMl8PaVGEUn9i9sZ-WN_Zd0gvmVTPZCoNtCxwTAIISGR6RsjSlhZ8AqbIDEuOD_Du2SP7XFcObA8Phf1YNlXai4PBTHT8c74Z7IO5i7exY0QL9uqJf0mQ6ZWvFvC-SJHjINXioOmp0Mjc",
         image: Unipilot,
         width: "w-[85vw] md:w-[750px]",
     },
     {
         title: "Meat Box",
-        category: "Neural Interaction",
+        category: "Premium Meat Delivery",
         //image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDeia5a7A6X7IO3uq0u2t1dpt3aMlU1A1Kq0we2Ka9xYJc5xhkOvZoqHLRwc7qAzYos6nEq82nZGhrESH2jG7bfTPVqnYNA1N6HUSpg1SHZ5zbfLN_3LaTqzzZEJAJpjtdZvvnNR1xsegE7QFd_LM-xjMLZj4frqrTezTITcbGovC24pdbmkmc7oqYsAg--CZEub9GMw4YUoRsNnZ4Wuvu8mfniAr8ULfzpl3YZ2ixHisKSkVvRb5J36Sg-hjjy-7FL4HBfgvOmDRKO",
         image: MeatBox,
         // width: "w-[70vw] md:w-[500px]",
@@ -133,54 +133,7 @@ const Work = () => {
                 </div>
             </div>
 
-            {/* Progress & Drag Explorer */}
-            <div className="max-w-7xl mx-auto px-10">
-                <div className="flex flex-col gap-2">
-                    <div className="flex justify-between items-end">
-                        <div className="flex flex-col gap-1">
-                            <span className="text-[10px] font-bold text-subtext uppercase tracking-widest">Navigator</span>
-                            <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary text-sm animate-bounce-x">keyboard_double_arrow_right</span>
-                                <span className="text-xs font-bold text-heading  uppercase">Drag to explore reality</span>
-                            </div>
-                        </div>
-                        <div className="text-right">
-                            <span className="text-2xl md:text-4xl font-black text-primary tabular-nums tracking-tighter">{Math.round(percent)}%</span>
-                        </div>
-                    </div>
 
-                    <div className="relative h-10 group/slider flex items-center">
-                        {/* Native Slider for direct input */}
-                        <input
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.0001"
-                            value={percent / 100}
-                            onChange={handleSliderMove}
-                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
-                        />
-
-                        {/* Custom Track Visual */}
-                        <div className="absolute w-full h-[2px] bg-gray-200 dark:bg-white/10 rounded-full">
-                            {/* Progress Line */}
-                            <motion.div
-                                className="h-full bg-primary rounded-full origin-left relative"
-                                style={{ width: `${percent}%` }}
-                            >
-                                {/* Glowing Tip */}
-                                <div className="absolute right-0 top-1/2 -translate-y-1/2 size-2 bg-primary rounded-full blur-[4px]" />
-                            </motion.div>
-                        </div>
-
-                        {/* Drag Handle Dot */}
-                        <div
-                            style={{ left: `${percent}%` }}
-                            className="absolute size-4 bg-primary rounded-full border-2 border-white dark:border-background-dark shadow-lg -translate-x-1/2 pointer-events-none z-10 transition-transform group-hover/slider:scale-150"
-                        />
-                    </div>
-                </div>
-            </div>
 
             {/* Expertise Domains */}
             <div className="max-w-7xl mx-auto px-10 mt-32 grid grid-cols-1 md:grid-cols-3 gap-12">

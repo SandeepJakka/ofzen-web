@@ -29,27 +29,31 @@ const projects = [
     {
         id: "0",
         title: "Koyya Enterprises",
-        description: "Leading the next generation of enterprise orchestration with precision and scale.",
+        description: "A unified platform combining technology and agribusiness solutions to drive digital growth. Built to streamline operations and expand business reach.",
+        imgdescription: ["Koyya was built to bridge technology and agribusiness into one powerful business ecosystem. The goal was to enable digital growth while strengthening agricultural commerce through modern platforms.", "The platform improved brand presence, customer engagement, and service accessibility across both verticals. It streamlined operations and positioned Koyya as a future-ready enterprise.", "The system was designed to expand into new services, e-commerce offerings, and regional markets. Its modular architecture supports continuous growth.", "Technology services, agri-commerce tools, and digital marketing systems were unified into a connected digital ecosystem. This ensured seamless data flow and efficient management."],
         image: [Koyya, Koyya1, Koyya2, Koyya3]
     },
     {
         id: "1",
         title: "Code Tracker",
-        description: "Real-time sustainability tracking and energy optimization for modern ecosystems.",
+        description: "A platform that tracks development progress and team productivity in real time. Built for transparency and efficiency.",
+        imgdescription: ["CodeTracker was built to bring clarity and accountability into software development workflows. It helps teams monitor progress in real time.", "Teams achieved better productivity, transparency, and faster project completion. Management gained actionable insights through analytics.", "The platform supports multiple projects, growing teams, and enterprise-level workflows. It scales seamlessly with development needs.", "It connects with code repositories, task tools, and reporting dashboards. This creates a unified development monitoring environment."],
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDt3hoH7beht8VmEch3ibONIzOL6WuMVegFGJU_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qqazq5O6th-PZXoUp0Dp8uwKyeh9LRJSkDsAbIg_BAQuQyJNH1_",
         image: [CodeTracker, ct1, ct2, ct3]
     },
     {
         id: "2",
         title: "SKC Caterers",
-        description: "High-end digital shopping experiences for the world's most exclusive brands.",
+        description: "A digital system that automates catering orders and customer coordination. Designed for faster service and smoother operations.",
+        imgdescription: ["SKC Catering aimed to digitize catering operations for smoother order management and customer communication. The focus was on speed, accuracy, and service excellence.", "Manual processes were replaced with automated bookings and streamlined workflows. This resulted in faster service delivery and improved customer satisfaction.", "The platform supports high-volume orders, multiple branches, and large events. It is built to grow alongside business expansion.", "Online ordering, payments, scheduling, and admin controls were connected into a single system. This created a seamless operational experience."],
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8X29jXnrQ42KNad2uNXBGv2DyEK_Jnlx45gRQeRlfHN1YeJ5JUjCAi9o6fRm8gayInvBAiuP2REFop87YTNKSWEwgcY-PpVVDMkXJqohdFE2gylo8yZ-xgGjwMLK_VZYKMl8PaVGEUn9i9sZ-WN_Zd0gvmVTPZCoNtCxwTAIISGR6RsjSlhZ8AqbIDEuOD_Du2SP7XFcObA8Phf1YNlXai4PBTHT8c74Z7IO5i7exY0QL9uqJf0mQ6ZWvFvC-SJHjINXioOmp0Mjc",
         image: [SKC, skc1, skc2, skc3]
     },
     {
         id: "3",
         title: "Unipilot",
-        description: "Neural interaction models that redefine the boundary between human and machine.",
+        description: "A unified digital system automating academic and campus operations. Designed for scalable, modern university management.",
+        imgdescription: ["UniPilot was designed to transform university operations into one intelligent digital ecosystem. The goal was automation, transparency, and smarter governance.", "Academic processes, finance, and campus operations became faster, more accurate, and fully connected. Institutions experienced improved efficiency and control.", "Built for large universities, multi-campus expansion, and future digital modules. It is engineered for long-term institutional growth.", "Exams, fees, hostel, HR, transport, placements, and analytics were unified into a single platform. This eliminated silos and improved real-time decision making."],
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDeia5a7A6X7IO3uq0u2t1dpt3aMlU1A1Kq0we2Ka9xYJc5xhkOvZoqHLRwc7qAzYos6nEq82nZGhrESH2jG7bfTPVqnYNA1N6HUSpg1SHZ5zbfLN_3LaTqzzZEJAJpjtdZvvnNR1xsegE7QFd_LM-xjMLZj4frqrTezTITcbGovC24pdbmkmc7oqYsAg--CZEub9GMw4YUoRsNnZ4Wuvu8mfniAr8ULfzpl3YZ2ixHisKSkVvRb5J36Sg-hjjy-7FL4HBfgvOmDRKO",
         image: [Unipilot, U1, U2, U3]
     },
@@ -57,7 +61,8 @@ const projects = [
     {
         id: "4",
         title: "Meat Box",
-        description: "Neural interaction models that redefine the boundary between human and machine.",
+        description: "A hyperlocal meat delivery app offering quick ordering and real-time tracking. Focused on freshness, speed, and convenience.",
+        imgdescription: ["MeatBox was created to offer fast, reliable hyperlocal meat delivery through a user-friendly mobile experience. The focus was freshness, convenience, and trust.", "Customers experienced quicker ordering and real-time tracking while vendors gained better inventory control. This boosted operational efficiency and repeat orders.", "The platform can easily expand to new locations, product lines, and subscription models. It is optimized for rapid growth.", "Delivery tracking, payments, inventory systems, and admin dashboards were fully connected. This ensured smooth end-to-end operations."],
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDeia5a7A6X7IO3uq0u2t1dpt3aMlU1A1Kq0we2Ka9xYJc5xhkOvZoqHLRwc7qAzYos6nEq82nZGhrESH2jG7bfTPVqnYNA1N6HUSpg1SHZ5zbfLN_3LaTqzzZEJAJpjtdZvvnNR1xsegE7QFd_LM-xjMLZj4frqrTezTITcbGovC24pdbmkmc7oqYsAg--CZEub9GMw4YUoRsNnZ4Wuvu8mfniAr8ULfzpl3YZ2ixHisKSkVvRb5J36Sg-hjjy-7FL4HBfgvOmDRKO",
         image: [MeatBox, mt1, mt2, mt3]
     },
@@ -101,7 +106,7 @@ const ProjectSlide = ({ project }) => {
                         <div className="flex flex-col gap-4 md:gap-6">
                             <h3 className="text-xl md:text-4xl font-black text-heading">The Vision</h3>
                             <p className="text-sm md:text-lg text-subtext leading-relaxed">
-                                Our collaborative approach starts by uncovering the core values of your mission. We deep-dive into the technical requirements to ensure every pixel serves a strategic purpose.
+                                {project.imgdescription[0]}
                             </p>
                         </div>
                     </div>
@@ -111,8 +116,7 @@ const ProjectSlide = ({ project }) => {
                         <div className="order-2 md:order-1 flex flex-col gap-4 md:gap-6">
                             <h3 className="text-xl md:text-4xl font-black text-heading">The Impact</h3>
                             <p className="text-sm md:text-lg text-subtext leading-relaxed">
-                                Implementing advanced neural networks allowed for a 40% increase in user retention.
-                                The aesthetic clarity of the interface ensures complex data streams remain intuitive.
+                                {project.imgdescription[1]}
                             </p>
                         </div>
                         <div className="order-1 md:order-2 rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-xl aspect-video md:aspect-[4/3] bg-black/5">
@@ -128,7 +132,7 @@ const ProjectSlide = ({ project }) => {
                         <div className="flex flex-col gap-4 md:gap-6">
                             <h3 className="text-xl md:text-4xl font-black text-heading">Scalability</h3>
                             <p className="text-sm md:text-lg text-subtext leading-relaxed">
-                                Built on a global microservices architecture, the platform scales horizontally to support millions of concurrent connections globally.
+                                {project.imgdescription[2]}
                             </p>
                         </div>
                     </div>
@@ -138,7 +142,7 @@ const ProjectSlide = ({ project }) => {
                         <div className="order-2 md:order-1 flex flex-col gap-4 md:gap-6">
                             <h3 className="text-xl md:text-4xl font-black text-heading">Integration</h3>
                             <p className="text-sm md:text-lg text-subtext leading-relaxed">
-                                Seamlessly connecting with existing infrastructure, our solution ensures that data flow is unified across all touchpoints for everyone.
+                                {project.imgdescription[3]}
                             </p>
                         </div>
                         <div className="order-1 md:order-2 rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-xl aspect-video md:aspect-[4/3] bg-black/5">
