@@ -11,7 +11,7 @@ const AppContent = () => {
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<MainPage />} />
-                <Route path="/project/:id" element={<ProjectDetails />} />
+                <Route path="/project/:slug" element={<ProjectDetails />} />
             </Routes>
         </AnimatePresence>
     );

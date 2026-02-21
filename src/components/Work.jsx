@@ -13,6 +13,7 @@ const projects = [
         category: "Turning Ideas into Impactful Solutions",
         image: Koyya,
         width: "w-[85vw] md:w-[750px]",
+        slug: "koyya-enterprises"
     },
     {
         title: "Code Tracker",
@@ -20,6 +21,7 @@ const projects = [
         //image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDt3hoH7beht8VmEch3ibONIzOL6WuMVegFGJU_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qqazq5O6th-PZXoUp0Dp8uwKyeh9LRJSkDsAbIg_BAQuQyJNH1_",
         image: CodeTracker,
         width: "w-[85vw] md:w-[750px]",
+        slug: "code-tracker"
     },
     {
         title: "SKC Caterers",
@@ -27,6 +29,7 @@ const projects = [
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8X29jXnrQ42KNad2uNXBGv2DyEK_Jnlx45gRQeRlfHN1YeJ5JUjCAi9o6fRm8gayInvBAiuP2REFop87YTNKSWEwgcY-PpVVDMkXJqohdFE2gylo8yZ-xgGjwMLK_VZYKMl8PaVGEUn9i9sZ-WN_Zd0gvmVTPZCoNtCxwTAIISGR6RsjSlhZ8AqbIDEuOD_Du2SP7XFcObA8Phf1YNlXai4PBTHT8c74Z7IO5i7exY0QL9uqJf0mQ6ZWvFvC-SJHjINXioOmp0Mjc",
         image: SKC,
         width: "w-[85vw] md:w-[750px]",
+        slug: "skc-caterers"
     },
     {
         title: "Unipilot",
@@ -34,6 +37,7 @@ const projects = [
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8X29jXnrQ42KNad2uNXBGv2DyEK_Jnlx45gRQeRlfHN1YeJ5JUjCAi9o6fRm8gayInvBAiuP2REFop87YTNKSWEwgcY-PpVVDMkXJqohdFE2gylo8yZ-xgGjwMLK_VZYKMl8PaVGEUn9i9sZ-WN_Zd0gvmVTPZCoNtCxwTAIISGR6RsjSlhZ8AqbIDEuOD_Du2SP7XFcObA8Phf1YNlXai4PBTHT8c74Z7IO5i7exY0QL9uqJf0mQ6ZWvFvC-SJHjINXioOmp0Mjc",
         image: Unipilot,
         width: "w-[85vw] md:w-[750px]",
+        slug: "unipilot"
     },
     {
         title: "Meat Box",
@@ -44,6 +48,7 @@ const projects = [
         // aspect: "aspect-[3/4]",
         // isPortrait: true
         width: "w-[85vw] md:w-[750px]",
+        slug: "meat-box"
     }
 ];
 
@@ -123,13 +128,13 @@ const Work = () => {
                 {/* Mobile Navigation Buttons Overlay */}
                 <button
                     onClick={() => scroll('left')}
-                    className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur shadow-lg flex items-center justify-center text-heading"
+                    className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white border border-primary/20 shadow-lg flex items-center justify-center text-primary"
                 >
                     <span className="material-symbols-outlined">west</span>
                 </button>
                 <button
                     onClick={() => scroll('right')}
-                    className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur shadow-lg flex items-center justify-center text-heading"
+                    className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 size-10 rounded-full bg-white border border-primary/20 shadow-lg flex items-center justify-center text-primary"
                 >
                     <span className="material-symbols-outlined">east</span>
                 </button>
@@ -144,7 +149,7 @@ const Work = () => {
                             className={`flex-none ${project.width} snap-center group/card cursor-pointer`}
                             whileHover={{ y: -8 }}
                             transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                            onClick={() => navigate(`/project/${index}`)}
+                            onClick={() => navigate(`/project/${project.slug}`)}
                         >
                             <div className={`relative glass-card ${project.isPortrait ? 'rounded-[2rem]' : 'rounded-2xl'} p-2 md:p-3 shadow-xl overflow-hidden ${project.aspect || 'aspect-video'}`}>
                                 <div className={`w-full h-full ${project.isPortrait ? 'rounded-[1.6rem]' : 'rounded-xl'} overflow-hidden relative bg-black/5 group-hover/card:shadow-inner transition-all duration-500`}>

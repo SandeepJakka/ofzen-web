@@ -28,6 +28,7 @@ import mt3 from '../assets/mt3.jpeg';
 const projects = [
     {
         id: "0",
+        slug: "koyya-enterprises",
         title: "Koyya Enterprises",
         description: "A unified platform combining technology and agribusiness solutions to drive digital growth. Built to streamline operations and expand business reach.",
         imgdescription: ["Koyya was built to bridge technology and agribusiness into one powerful business ecosystem. The goal was to enable digital growth while strengthening agricultural commerce through modern platforms.", "The platform improved brand presence, customer engagement, and service accessibility across both verticals. It streamlined operations and positioned Koyya as a future-ready enterprise.", "The system was designed to expand into new services, e-commerce offerings, and regional markets. Its modular architecture supports continuous growth.", "Technology services, agri-commerce tools, and digital marketing systems were unified into a connected digital ecosystem. This ensured seamless data flow and efficient management."],
@@ -35,14 +36,16 @@ const projects = [
     },
     {
         id: "1",
+        slug: "code-tracker",
         title: "Code Tracker",
         description: "A platform that tracks development progress and team productivity in real time. Built for transparency and efficiency.",
         imgdescription: ["CodeTracker was built to bring clarity and accountability into software development workflows. It helps teams monitor progress in real time.", "Teams achieved better productivity, transparency, and faster project completion. Management gained actionable insights through analytics.", "The platform supports multiple projects, growing teams, and enterprise-level workflows. It scales seamlessly with development needs.", "It connects with code repositories, task tools, and reporting dashboards. This creates a unified development monitoring environment."],
-        // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDt3hoH7beht8VmEch3ibONIzOL6WuMVegFGJU_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qqazq5O6th-PZXoUp0Dp8uwKyeh9LRJSkDsAbIg_BAQuQyJNH1_",
+        // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDt3hoH7beht8VmEch3ibONIzOL6WuMVegFGJU_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qw0IZ-c69C6MqjSCZ4OevZ-6yoo5nFbpkUVULCszfvBPJaOH-OJuXplHytdui1cUfkHjI-mEIcGk--4Y_Io56B-3bRlvCsTHagxNSlF3NZefa9A9n0JteM7XnY6b573ziTODL-UgeIIfkzXrQRkwOTJ7gmZn-NYKAUruD7ID23ayiRgQRxF9_Qqazq5O6th-PZXoUp0Dp8uwKyeh9LRJSkDsAbIg_BAQuQyJNH1_",
         image: [CodeTracker, ct1, ct2, ct3]
     },
     {
         id: "2",
+        slug: "skc-caterers",
         title: "SKC Caterers",
         description: "A digital system that automates catering orders and customer coordination. Designed for faster service and smoother operations.",
         imgdescription: ["SKC Catering aimed to digitize catering operations for smoother order management and customer communication. The focus was on speed, accuracy, and service excellence.", "Manual processes were replaced with automated bookings and streamlined workflows. This resulted in faster service delivery and improved customer satisfaction.", "The platform supports high-volume orders, multiple branches, and large events. It is built to grow alongside business expansion.", "Online ordering, payments, scheduling, and admin controls were connected into a single system. This created a seamless operational experience."],
@@ -51,15 +54,16 @@ const projects = [
     },
     {
         id: "3",
+        slug: "unipilot",
         title: "Unipilot",
         description: "A unified digital system automating academic and campus operations. Designed for scalable, modern university management.",
         imgdescription: ["UniPilot was designed to transform university operations into one intelligent digital ecosystem. The goal was automation, transparency, and smarter governance.", "Academic processes, finance, and campus operations became faster, more accurate, and fully connected. Institutions experienced improved efficiency and control.", "Built for large universities, multi-campus expansion, and future digital modules. It is engineered for long-term institutional growth.", "Exams, fees, hostel, HR, transport, placements, and analytics were unified into a single platform. This eliminated silos and improved real-time decision making."],
         // image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDeia5a7A6X7IO3uq0u2t1dpt3aMlU1A1Kq0we2Ka9xYJc5xhkOvZoqHLRwc7qAzYos6nEq82nZGhrESH2jG7bfTPVqnYNA1N6HUSpg1SHZ5zbfLN_3LaTqzzZEJAJpjtdZvvnNR1xsegE7QFd_LM-xjMLZj4frqrTezTITcbGovC24pdbmkmc7oqYsAg--CZEub9GMw4YUoRsNnZ4Wuvu8mfniAr8ULfzpl3YZ2ixHisKSkVvRb5J36Sg-hjjy-7FL4HBfgvOmDRKO",
         image: [Unipilot, U1, U2, U3]
     },
-
     {
         id: "4",
+        slug: "meat-box",
         title: "Meat Box",
         description: "A hyperlocal meat delivery app offering quick ordering and real-time tracking. Focused on freshness, speed, and convenience.",
         imgdescription: ["MeatBox was created to offer fast, reliable hyperlocal meat delivery through a user-friendly mobile experience. The focus was freshness, convenience, and trust.", "Customers experienced quicker ordering and real-time tracking while vendors gained better inventory control. This boosted operational efficiency and repeat orders.", "The platform can easily expand to new locations, product lines, and subscription models. It is optimized for rapid growth.", "Delivery tracking, payments, inventory systems, and admin dashboards were fully connected. This ensured smooth end-to-end operations."],
@@ -156,25 +160,32 @@ const ProjectSlide = ({ project }) => {
 };
 
 const ProjectDetails = () => {
-    const { id } = useParams();
+    const { slug } = useParams();
     const navigate = useNavigate();
-    const [currentIndex, setCurrentIndex] = useState(parseInt(id) || 0);
+
+    // Find initial index by slug
+    const getInitialIndex = () => {
+        const index = projects.findIndex(p => p.slug === slug);
+        return index !== -1 ? index : 0;
+    };
+
+    const [currentIndex, setCurrentIndex] = useState(getInitialIndex());
     const [isScrolling, setIsScrolling] = useState(false);
 
-    // Sync with URL ID
+    // Sync with URL slug
     useEffect(() => {
-        const urlId = parseInt(id);
-        if (!isNaN(urlId) && urlId !== currentIndex) {
-            setCurrentIndex(urlId);
+        const index = projects.findIndex(p => p.slug === slug);
+        if (index !== -1 && index !== currentIndex) {
+            setCurrentIndex(index);
         }
-    }, [id]);
+    }, [slug]);
 
     const handleSwitch = (newIndex) => {
         if (newIndex < 0 || newIndex >= projects.length || isScrolling) return;
 
         setIsScrolling(true);
         setCurrentIndex(newIndex);
-        navigate(`/project/${newIndex}`, { replace: true });
+        navigate(`/project/${projects[newIndex].slug}`, { replace: true });
 
         // Interaction lock
         setTimeout(() => setIsScrolling(false), 800);
